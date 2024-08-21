@@ -1,0 +1,39 @@
+/* style.css */
+@import url("static/css/fonts.css");
+
+/* all variable declarations*/
+:root {
+	/* header vars */
+	--header-height: 4rem;
+	--header-logo-size: 3rem;
+
+	/* footer vars */
+	--footer-height: 2rem;
+	--footer-text-size: 1rem;
+}
+
+body {
+	margin: 0;
+	background: white;
+	color: black;
+	font-family: "Atkinson Hyperlegible";
+}
+
+main {
+	padding: 1rem;
+	margin: 2rem auto;
+	max-width: 40rem;
+}
+
+.center {
+	width: 70%;
+	margin: auto;
+}
+
+.left {
+	float: left;
+}
+
+.right {
+	float: right;
+}
