@@ -1,42 +1,25 @@
 <!-- Footer.svelte -->
-<script>
-	import '$lib/styles/style.css';
-</script>
-
-<footer>
-	<div class="center">
-		<span class="left"> Made by Anthony Maltsev, 2024 </span>
+<div class="container-fluid">
+	<div class="row footer justify-content-between">
+		<div class="col-12 col-md-3"> 
+			Made by Anthony Maltsev, 2024 
+		</div>
 	
-		<ul class="right">
-			<li>
-				<a href="mailto:anthony.maltsev@gmail.com">Email: ant@bugmilkshakes.org </a>
-			</li>
-		</ul>
+		<div class="col-12 col-md-3">
+			<a href="mailto:anthony.maltsev@gmail.com">Email: ant@bugmilkshakes.org </a>
+		</div>
 	</div>
-</footer>
+</div>
 
 <style>
-
-
-	footer {
-		position: relative;
-		margin-top: -30px;
-		height: 30px;
-		clear: both;
+	.footer {
         background: #ddd;
-        padding: 1rem;
-		display: flex;
-		flex-wrap: wrap;
-		justify-content: space-between;
 		font-size: var(--footer-text-size);
+		min-height: 3rem;
+		align-items: center;
+		text-align: center;
+		margin-top: 1.5rem;
     }
-
-	ul {
-		margin: 0;
-		list-style-type: none;
-		display: flex;
-		gap: 1rem;
-	}
 
 	a {
 		text-decoration: none;

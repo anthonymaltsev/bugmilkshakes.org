@@ -1,36 +1,32 @@
 <!-- Header.svelte -->
 
-<script>
-	import '$lib/styles/style.css';
-</script>
+<nav class="navbar navbar-light navbar-expand-sm header">
+	<div class="container-fluid">
+		<a class="navbar-brand" id="logo" href="/">Bug Milkshakes</a>
+		
+		<button type="button" class="navbar-toggler" data-toggle="collapse" data-target="#bugmilk-nav" 
+				aria-controls="bugmilk-nav" aria-expanded="false" aria-label="Toggle navigation">
+			<span class="navbar-toggler-icon"></span>
+		</button>
 
-<header>
-	<div class="center">
-		<a href="/" class="left" id="logo">Bug Milkshakes</a>
-	
-		<nav class="right">
-			<div>
-				<a href="/blog" class="navbaritem">Blog</a>
-				<a href="/cv" class="navbaritem">CV</a>
-			</div>
-		</nav>
+		<div class="collapse navbar-collapse justify-content-end" id="bugmilk-nav" >
+			<ul class="navbar-nav mr-auto">
+				<li class="nav-item navbaritem"> <a href="/blog" class="nav-link">Blog</a> </li>
+				<li class="nav-item navbaritem"> <a href="/cv" class="nav-link">CV</a> </li>
+			</ul>
+		</div>
 	</div>
-</header>
+</nav>
+
 
 <style>
-	header {
+	.header {
 		min-height: var(--header-height);
 		background: #ddd;
-		display: flex;
-		flex-direction: row;
-		flex-wrap: wrap;
-		justify-content: space-between;
-
-		color: black;
-		font-size: 3rem;
 	}
 
 	#logo {
+		font-size: 2rem;
 		font-weight: bold;
 		padding: 1rem 0;
 	}
@@ -63,7 +59,7 @@
 	}
 
 	.navbaritem:hover {
-		background-image: url("$lib/assets/main_gradient.avif");
+		background-image: var(--main-back-img);
 		background-size: 200px;
 		border: 1px solid black;
 	}

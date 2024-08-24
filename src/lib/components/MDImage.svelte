@@ -2,28 +2,22 @@
     export let src;
     export let caption;
 </script>
-
-<div class="small-center">
-    <img {src} alt={caption}>
-</div>
-
-<div class="small-center">
-    {caption}
+<div class="row justify-content-center">
+    <div class="col-10 col-lg-6 justify-content-center">
+        <div class="row">
+            <img {src} alt={caption} class="img-fluid img-rounded">
+        
+        </div>
+        
+        <div class="row text-center">
+            <p class="text-center" id="caption">{caption}</p>
+        </div>
+    </div>
 </div>
 
 <style>
-    img {
-        width: 75%;
-        border-radius: 10px;
-    }
-    .small-center {
-        width: 75%;
-        font-size: 0.85rem;
+    #caption {
         font-style: italic;
-        text-align: center;
-        display: block;
-        margin-left: auto;
-        margin-right: auto;
-        
+        font-size: 0.8rem;
     }
 </style>

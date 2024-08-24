@@ -7,22 +7,12 @@
 
 </script>
 
-<Header />
+<div>
+	<Header />
 
-<main>
-	<div class="center">
+	<div class="container">
 		<slot />
 	</div>
-</main>
 
-<Footer />
-
-<style>
-	main {
-		background: transparent;
-		display: block;	
-		min-width: 90%;	
-		min-height: 90vh;
-	}
-
-</style>
+	<Footer />
+</div>
