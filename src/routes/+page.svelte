@@ -1,6 +1,6 @@
 <script>
-    import Icon from '$lib/components/Icon.svelte';
-    import portrait from '$lib/assets/hawaii_waterfall.jpg'
+    import Icon from '$components/Icon.svelte';
+    import MDImage from '$components/MDImage.svelte';
 </script>
 
 <head>
@@ -16,59 +16,32 @@
 </div>
 
 <div id="social-media">
-    <a href="https://github.com/anthonymaltsev" rel="external" class="link"> 
+    <a href="https://github.com/anthonymaltsev" rel="external" class="no-text-decoration"> 
         <Icon char=&#xf09b type="brand" /> 
     </a>
 
-    <a href="https://linkedin.com/in/anthony-maltsev" rel="external" class="link"> 
+    <a href="https://linkedin.com/in/anthony-maltsev" rel="external" class="no-text-decoration"> 
         <Icon char=&#xf0e1 type="brand" /> 
     </a>
 
-    <a href="https://instagram.com/bug_milkshakes" rel="external" class="link"> 
+    <a href="https://instagram.com/bug_milkshakes" rel="external" class="no-text-decoration"> 
         <Icon char=&#xf16d type="brand" /> 
     </a>
 
-    <a href="mailto:anthony.maltsev@gmail.com" rel="external" class="link"> 
+    <a href="mailto:ant@bugmilkshakes.org" rel="external" class="no-text-decoration"> 
         <Icon char=&#xf1fa type="solid" /> 
     </a>
 </div>
 
-<img src={portrait} alt="Me in front of a waterfall" id="portrait" class="center"/>
-
-<div id="ps">p.s. Anthony Maltsev == ant malts == bug milkshakes</div>
+{#await import("$misc/hawaii_waterfall.jpg")}
+    Loading Image...
+{:then {default: imgsrc}} 
+    <MDImage src={imgsrc} caption="p.s. Anthony Maltsev == ant malts == bug milkshakes"/>
+{/await}
 
 <style>
-    a {
-        user-select: none;
-        font-size: 4rem;
-        font-family: lineawesome-brands;
-        color: black;
-    }
-
     #welcome {
         margin-bottom: 20px;
-    }
-
-    #portrait {
-        width: 60%;
-        display: block;
-        margin: auto;
-        margin-top: 20px;
-        border-radius: 10px;
-    }
-    
-    #ps {
-        padding-top: 20px;
-        display: block;
-        margin: auto;
-        font-size: 0.85rem;
-        font-style: italic;
-        text-align: center;
-    }
-
-    .link {
-        text-decoration: none;
-        background-color: none;
-    }
+    }    
 </style>
 

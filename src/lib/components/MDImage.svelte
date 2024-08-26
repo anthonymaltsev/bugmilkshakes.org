@@ -3,9 +3,9 @@
     export let caption;
 </script>
 <div class="row justify-content-center">
-    <div class="col-10 col-lg-6 justify-content-center">
+    <div class="col-12 col-sm-6 justify-content-center">
         <div class="row">
-            <img {src} alt={caption} class="img-fluid img-rounded">
+            <img {src} alt={caption} />
         
         </div>
         

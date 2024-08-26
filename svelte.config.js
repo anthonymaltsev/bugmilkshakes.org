@@ -5,7 +5,13 @@ import { sveltePreprocess } from 'svelte-preprocess';
 /** @type {import('@sveltejs/kit').Config} */
 const config = {
 	kit: {
-		adapter: adapter()
+		adapter: adapter(),
+		alias: {
+			'$bp': 'src/content/blog_posts',
+			'$assets': 'src/lib/assets',
+			'$components': 'src/lib/components',
+			'$misc': 'src/content/misc'
+		}
 	},
 
 	extensions: ['.svelte', '.md'],

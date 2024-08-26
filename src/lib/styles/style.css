@@ -1,17 +1,51 @@
 /* style.css */
-@import url("static/css/fonts.css");
+@import url("/static/css/fonts.css");
 
 /* all variable declarations*/
 :root {
-	--main-back-img: url("$lib/assets/main_gradient.avif");
+	--main-back-img: url("$misc/main_gradient.avif");
 	/* header vars */
 	--header-height: 4rem;
-	--header-logo-size: 3rem;
+	--header-logo-size: 2rem;
 
 	/* footer vars */
-	--footer-height: 2rem;
+	--footer-height: 3rem;
 	--footer-text-size: 1rem;
 
 	/* global style*/
 	font-family: "Atkinson Hyperlegible";
+}
+
+.button-box {
+	padding: 0.5rem;
+	border-radius: 8px;
+	border: 1px solid transparent;
+	background-image: none;
+	background-clip: border-box;
+	-webkit-background-clip: border-box;
+}
+
+.hover-gradient-text:hover {
+	color: transparent;
+	background-image: var(--main-back-img);
+	background-clip: text;
+	-webkit-background-clip: text;
+	-webkit-text-stroke: #111 1px;
+	background-position: left;
+	background-size: 200px;
+	transition: color 0.1s;
+}
+
+.hover-gradient-background {
+	border: 1px solid transparent;
+}
+.hover-gradient-background:hover {
+	background-image: var(--main-back-img);
+	background-size: 200px;
+	border: 1px solid black;
+}
+
+.no-text-decoration {
+	text-decoration: none;
+	color: inherit;
 }

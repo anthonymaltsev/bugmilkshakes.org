@@ -22,12 +22,13 @@
 
     span {
         margin: 0;
+        font-size: 4rem;
         user-select: none;
     }
 
     :hover {
         color: transparent;
-		background-image: url("$lib/assets/main_gradient.avif");
+		background-image: var(--main-back-img);
 		background-clip: text;
 		-webkit-background-clip: text;
         -webkit-text-stroke: #111 1px;

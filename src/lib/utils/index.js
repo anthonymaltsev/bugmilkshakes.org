@@ -1,15 +1,17 @@
 export const fetchMarkdownPosts = async () => {
-	const allPostFiles = import.meta.glob('/src/routes/blog/*.md');
+	const allPostFiles = import.meta.glob('/src/content/blog_posts/*/post.md');
 	const iterablePostFiles = Object.entries(allPostFiles);
 
 	const allPosts = await Promise.all(
 		iterablePostFiles.map(async ([path, resolver]) => {
 			const { metadata } = await resolver();
-			const postPath = path.slice(11, -3);
+			const slug = path.split("/")[4];
+			const postPath = "/blog/" + slug;
 
 			return {
 				meta: metadata,
-				path: postPath
+				path: postPath,
+				slug: slug
 			};
 		})
 	);

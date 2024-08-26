@@ -3,30 +3,24 @@
     export let caption;
 </script>
 
-<div class="small-center">
-    <audio controls="controls">
-        <source type="audio/mp3" {src} />
-        <p>Your browser does not support the audio element.</p>
-    </audio>
-</div>
-
-<div class="small-center">
-    {caption}
+<div class="row justify-content-center">
+    <div class="col-12 col-sm-6 justify-content-center">
+        <div class="row">
+            <audio controls="controls">
+                <source type="audio/mp3" {src} />
+                <p>Your browser does not support the audio element.</p>
+            </audio>
+        </div>
+        
+        <div class="row text-center">
+            <p class="text-center" id="caption">{caption}</p>
+        </div>
+    </div>
 </div>
 
 <style>
-    audio {
-        width: 75%;
-        border-radius: 10px;
-    }
-    .small-center {
-        width: 75%;
-        font-size: 0.85rem;
+    #caption {
         font-style: italic;
-        text-align: center;
-        display: block;
-        margin-left: auto;
-        margin-right: auto;
-        
+        font-size: 0.8rem;
     }
 </style>
