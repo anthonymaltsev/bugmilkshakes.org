@@ -16,7 +16,12 @@
 	
 	<div class="underlined"><svelte:component this={data.content} assets={data.assets}/></div>
 
-	<div>Any comments? Send them to <a href="mailto:ant@bugmilkshakes.org">ant@bugmilkshakes.org</a></div>
+	<div>
+		Any comments? Send them to 
+		<a href="mailto:ant@bugmilkshakes.org?subject=Comments regarding {data.title}">
+			ant@bugmilkshakes.org
+		</a>
+	</div>
 </article>
 
 <style>
