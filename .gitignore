@@ -5,6 +5,7 @@ node_modules
 .vercel
 /.svelte-kit
 /build
+.wrangler/
 
 # OS
 .DS_Store
@@ -15,7 +16,11 @@ Thumbs.db
 .env.*
 !.env.example
 !.env.test
-package-lock.json
+
+# package-lock.json is deliberately NOT ignored. This site is an archive that
+# rebuilds in CI on every push; without a lockfile npm re-resolves the "^"
+# ranges against a 2024 dependency tree and a future build can break on
+# versions that were never tested here.
 
 # Vite
 vite.config.js.timestamp-*
